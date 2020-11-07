@@ -1,6 +1,9 @@
 # Game Off Entry
 Game entry for the GitHub Game Off 2020
 
+**Languages:** Python/Java (Back-end) & JavaScript (Front-end)
+
+
 **Ideas:**
 - Turn-based Meteor Shooter
 - Pong-Brickbreaker
