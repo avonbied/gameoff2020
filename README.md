@@ -1,8 +1,8 @@
 # Game Off Entry
 Game entry for the GitHub Game Off 2020
 
-**Languages:** Python/Java (Back-end) & JavaScript (Front-end)
-
+**Languages:** Python/Java (Back-end) & JavaScript (Front-end)  
+**Libraries:** PixiJS
 
 **Ideas:**
 - Turn-based Meteor Shooter
