@@ -1,0 +1,23 @@
+{
+  "name": "comet-breaker",
+  "version": "1.0.0",
+  "description": "Pong-style BrickBreaker game for GitHub Game Off 2020",
+  "main": "main.js",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avonbied/gameoff2020.git"
+  },
+  "author": "Lex von Biedenfeld",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/avonbied/gameoff2020/issues"
+  },
+  "homepage": "https://github.com/avonbied/gameoff2020#readme",
+  "dependencies": {
+    "pixi.js": "^5.3.3"
+  }
+}
