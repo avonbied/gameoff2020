@@ -1,0 +1,8 @@
+dist/
+
+# NodeJS
+node_modules/
+*-lock.yaml
+
+# Python
+*.pyc
