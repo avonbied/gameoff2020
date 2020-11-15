@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "module": "ESNext",
+        "moduleResolution": "node",
+        "outDir": "./lib",
+        "target": "ESNext",
+        "allowJs": true,
+        "lib": [
+            "DOM",
+            "ESNext"
+        ],
+        "typeRoots": [
+            "node_modules/@types"
+        ]
+    },
+    "include": [
+        "src/**/*.ts",
+        "node_modules/@types"
+    ],
+    "exclude": [
+        ".git",
+        "node_modules"
+    ]
+}
