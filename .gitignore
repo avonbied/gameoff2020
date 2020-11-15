@@ -4,5 +4,6 @@ dist/
 node_modules/
 *-lock.yaml
 
+.cache/
 # Python
 *.pyc
