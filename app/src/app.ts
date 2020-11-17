@@ -1,17 +1,17 @@
-import 'phaser';
+import * as Phaser from 'phaser';
 
 const config: Phaser.Types.Core.GameConfig = {
-  title: "Starfall",
-  width: 800,
-  height: 600,
-  parent: "game",
-  backgroundColor: "#18216D"
+    type: Phaser.AUTO,
+    title: "Comet Breaker",
+    width: window.innerWidth,
+    height: window.innerHeight,
+    parent: "game",
+    backgroundColor: "#363636",
+    scene: [],
+    physics: {
+        default: "arcade",
+        arcade: { debug: false }
+    },
 };
-export class StarfallGame extends Phaser.Game {
-  constructor(config: Phaser.Types.Core.GameConfig) {
-    super(config);
-  }
-}
-window.onload = () => {
-  var game = new StarfallGame(config);
-};
+
+export default new Phaser.Game(config);
