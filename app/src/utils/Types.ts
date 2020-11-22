@@ -1,9 +1,3 @@
-
-export interface Position {
-    x: number;
-    y: number;
-};
-
 export type Dimension = {
     height: number;
     width: number;
