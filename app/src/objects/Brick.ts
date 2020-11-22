@@ -1,33 +1,43 @@
-import { Position } from '../utils/Types';
+import { AbstractGameObject } from './GameObject';
 
-export default class Brick {
-    private _context: CanvasRenderingContext2D;
-    
-    private _position: Position;
+export default class Brick extends AbstractGameObject {
 
-    private width: number;
-    private height: number;
+    private _width: number;
+    private _height: number;
 
     private health: number;
     private hasPowerUp: boolean;
 
-    constructor(context: CanvasRenderingContext2D, width: number, height: number) {
-        this._context = context;
-        this.width = width;
-        this.height = height;
+    constructor(width: number, height: number) {
+        super();
+        this._width = width;
+        this._height = height;
+
+        this.clear();
     }
 
-    get position(): Position { return this._position; }
-    set position(pos) {
-        this._position = pos;
+    update(timeDelta: number): void {
+        this._position.add(this._speed.scale(timeDelta));
+        // console.table({timeDelta, v: this._v, p: this.position });
     }
+    draw(context: CanvasRenderingContext2D): void {
+        context.save();
 
-
-    draw() {
-        this._context.beginPath();
-        this._context.fillStyle = 'blue';
-        this._context.fillRect(this.position.x, this.position.y, this.width, this.height);
-        this._context.fill();
-        this._context.closePath();
+        
+        context.beginPath();
+        context.rect(this.position.x, this.position.y, this._width, this._height);
+        context.closePath();
+        
+        context.fillStyle = 'blue';
+        context.strokeStyle = 'green';
+        context.lineWidth = 4;
+        context.stroke();
+        context.fill();
+        // Clears any residual
+        context.restore();
+    }
+    clear(): void {
+        this.position = {x: 500, y: 300};
+        this.speed = {vx: 20, vy: 30};
     }
 }
